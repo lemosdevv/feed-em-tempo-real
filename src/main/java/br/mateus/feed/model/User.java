@@ -41,8 +41,8 @@ public class User implements Serializable {
 
     private String bio;
 
-    @Column(name = "proile_picture_url")
-    private String profiePictureUrl;
+    @Column(name = "profile_picture_url")
+    private String profilePictureUrl;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
