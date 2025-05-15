@@ -1,5 +1,6 @@
 package br.mateus.feed.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -37,7 +38,7 @@ public class Comment implements Serializable {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String text;
 
-    @CreationTimestamp
     @Column(name = "created_at", updatable = false)
+    @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime createdAt;
 }
